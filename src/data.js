@@ -58,3 +58,7 @@ const studentList = [
     ]
   }
 ]
+
+export {
+  studentList
+}
