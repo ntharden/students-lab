@@ -2,11 +2,12 @@ import React from "react";
 
 const Score = (props) => {
   return (
-    <div className="card">
-      <div class="container">
-        Something
-      </div>
+    <>
+    <div>
+      <p>Score: {props.score.score}</p>
+      <p>Date: {props.score.date}</p>
     </div>
+    </>
   )
 
 }
