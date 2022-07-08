@@ -1,39 +1,15 @@
-import { studentList } from "./data";
-import { useState } from 'react';
+import React from 'react';
+import Score from './Score';
 
 
-const Student = () => {
-
-  const [index, setIndex] = useState(0)
-
-  function handleClick() {
-    if (index < studentList.length - 1){
-      setIndex(index + 1)
-    }
-  }
-
-  function handleBack() {
-    if (index > 0){
-      setIndex(index - 1)
-    }
-  }
-
-  let student = studentList[index]
-
+const Student = (props) => {
   return (
     <div className="card">
       <div class="container">
-        <h3>NAME:</h3>{student.name}
-        <br />
-        <h3>BIO:</h3>{student.bio}
+        <h3>NAME:</h3>{props.student.name}
+        <h3>BIO:</h3>{props.student.bio}
+        <h3>SCORE:</h3><Score />
       </div>
-      <button onClick={handleBack}>
-        Previous Student
-      </button>
-      <button onClick={handleClick}>
-        Next Student
-      </button>
-      
     </div>
   )
 

@@ -1,17 +1,6 @@
-import { studentList } from "./data";
-import { useState } from 'react';
+import React from "react";
 
-
-const Score = () => {
-
-  const [index, setIndex] = useState(0)
-
-  function handleClick() {
-    setIndex(index + 1)
-  }
-
-  let score = studentList[index]
-
+const Score = (props) => {
   return (
     <div className="card">
       <div class="container">
